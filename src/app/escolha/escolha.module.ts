@@ -23,6 +23,4 @@ const routes: Routes = [
   ],
   declarations: [EscolhaPage]
 })
-export class EscolhaPageModule {
-    
-}
+export class EscolhaPageModule {}
