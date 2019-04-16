@@ -21,6 +21,8 @@
   <ion-item>R$ {{carro.preco}}</ion-item>
 </ion-item-group>
 
+
+
 <ion-item-group>
   <ion-item-divider color="secondary">
     <ion-icon name="options"></ion-icon>
@@ -34,8 +36,12 @@
     <ion-toggle></ion-toggle>
   </ion-item>
 </ion-item-group>
-<ion-item-divider color="light">
-  Total: R$ 1000
+
+
+
+
+<ion-item-divider color="danger">
+  Total: R$ {{carro.preco}}
 </ion-item-divider>
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
   <ion-fab-button (click)="voltar()">

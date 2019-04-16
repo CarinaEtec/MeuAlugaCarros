@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
 import { Carro } from '../modelos/Carro';
+import { Acessorios } from '../Ac/Acessorios';
+
 
 @Component({
   selector: 'app-escolha',
@@ -11,8 +13,8 @@ import { Carro } from '../modelos/Carro';
 export class EscolhaPage implements OnInit {
 
   private carro: Carro
-
-  private acessorios =  [];
+  
+  private acessorios : Acessorios []
 
   constructor(private navCtrl: NavController,
     private activatedRoute: ActivatedRoute) { }
@@ -26,11 +28,17 @@ export class EscolhaPage implements OnInit {
       });
       
       this.acessorios = [
-        {nome: "Freio ABS", preco:800},
-        {nome: "Ar-Condicionado", preco:1000},
-        {nome: "MP3 Player", preco:500},
+        {
+          "nome": "Freio ABS",  "preco": 800
+        },
+        {
+          "nome": "Ar-Condicionado", "preco": 1000
+        },
+        {
+          "nome": "MP3 Player", "preco": 500
+        },
       ];
-    }
+  }
 
   voltar(){
     this.navCtrl.back();
