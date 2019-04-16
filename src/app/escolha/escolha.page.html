@@ -23,22 +23,23 @@
 
 <ion-item-group>
   <ion-item-divider color="secondary">
-      <ion-icon name="options"></ion-icon>
-      Acessórios
+    <ion-icon name="options"></ion-icon>
+    Acessórios
   </ion-item-divider>
-  <ion-item>Acessório 1</ion-item>
-  <ion-item>Acessório 2</ion-item>
+  <ion-item *ngFor="let acessorio of acessorios">
+    <ion-label>
+      <h2>{{acessorio.nome}}</h2>
+      <h4>R$ {{acessorio.preco}}</h4>
+    </ion-label>
+    <ion-toggle></ion-toggle>
+  </ion-item>
 </ion-item-group>
-
-    <ion-item-divider color="danger">
-      Total: R$ 10000
-    </ion-item-divider>
-
-
+<ion-item-divider color="light">
+  Total: R$ 1000
+</ion-item-divider>
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
   <ion-fab-button (click)="voltar()">
     <ion-icon name="arrow-dropright"></ion-icon>
   </ion-fab-button>
 </ion-fab>
-
 </ion-content>
