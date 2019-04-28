@@ -39,21 +39,8 @@ export class EscolhaPage implements OnInit {
 
   atualizarTotal(ativo:boolean, acessorio: Acessorio){
     ativo ? this.precoTotal += acessorio.preco : this.precoTotal -= acessorio.preco;
-<<<<<<< HEAD
   }
 
-  avancaCadastro(){
-    let extras: NavigationExtras = {
-      queryParams:{
-        carroSelecionado: JSON.stringify(this.carro),
-        precoTotal: this.precoTotal
-      }
-    };
-
-    this.navCtrl.navigateForward(['cadastro'], extras);
-=======
->>>>>>> 84ef6832bcd8ff07e05150f241298ab5357dd1d6
-  }
 
   avancaCadastro(){
     let extras: NavigationExtras = {
